@@ -6,25 +6,26 @@ import {
   View,
 } from 'react-native';
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Input from './Src/Components/Input/Input';
 import List from './Src/Components/Lists/List';
 
 export default function App() {
-  const [state,SetState]=useState(["Merhaba","Dünya"]);
+  const [liste,SetListe]=useState();
+
   return (
     <SafeAreaView>
       <View style={style.header}>
         <Text style={style.Title}>React T0-DO App</Text>
       </View>
-      <Input/>
-      <List List={state}/>
+      <Input SetListe={SetListe} liste={liste}/>
+      <List Liste={liste}/>
     </SafeAreaView>
   )
 }
 
 const style=StyleSheet.create({
-  header:{width:"100%",backgroundColor:"blue"},
-  Title:{textAlign:'center',fontSize:24,fontWeight:'600'},
+  header:{width:"100%",backgroundColor:"blue",padding:10},
+  Title:{textAlign:'center',fontSize:20,fontWeight:'600',color:"white"},
   
 })
