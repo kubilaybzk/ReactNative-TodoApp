@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 
 export default function List({Liste}) {
   return (
-    <ScrollView style={{paddingTop:20,marginTop:12}}>
+    <ScrollView style={{marginTop:12}}>
       {Liste ? (
         Liste.map((item, key) => {
           return (

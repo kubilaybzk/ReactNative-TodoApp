@@ -16,7 +16,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <View style={style.header}>
-        <Text style={style.Title}>React T0-DO App</Text>
+        <Text style={style.Title}>React TO DO App</Text>
       </View>
       <Input SetListe={SetListe} liste={liste}/>
       <List Liste={liste}/>
