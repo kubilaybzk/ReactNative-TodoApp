@@ -12,12 +12,14 @@ export default function Input({SetListe, liste}) {
   const [text, setText] = useState();
   function AddList() {
     SetListe(liste ? [...liste, text] : [text]);
+    setText(null)
   }
   return (
     <View style={style.Container}>
       <TextInput
         style={style.Input}
         placeholder="Yapılacaklar ..."
+        value={text}
         onChangeText={setText}></TextInput>
       <TouchableOpacity onPress={AddList} style={style.Btn}>
         <Text style={style.BtnText}>+</Text>
@@ -32,7 +34,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     padding: 15,
-    backgroundColor: 'gray',
+    backgroundColor: 'black',
   },
   Input: {
     flex: 1,
@@ -50,7 +52,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     width: 50,
     height: 50,
-    backgroundColor: 'blue',
+    backgroundColor: '#FFCE2F',
     borderRadius: 10,
   },
   BtnText: {fontSize: 30, color: 'white'},

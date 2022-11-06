@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 
 export default function List({Liste}) {
   return (
@@ -14,7 +14,7 @@ export default function List({Liste}) {
         })
       ) : (
         <View>
-          <Text style={style.item}>Liste Şuan Boş</Text>
+         <Image source={require("../../../asset/logo.png")} />
         </View>
       )}
     </ScrollView>

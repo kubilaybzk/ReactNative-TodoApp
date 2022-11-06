@@ -25,7 +25,7 @@ export default function App() {
 }
 
 const style=StyleSheet.create({
-  header:{width:"100%",backgroundColor:"blue",padding:10},
+  header:{width:"100%",backgroundColor:"#FFCE2F",padding:10},
   Title:{textAlign:'center',fontSize:20,fontWeight:'600',color:"white"},
   
 })
